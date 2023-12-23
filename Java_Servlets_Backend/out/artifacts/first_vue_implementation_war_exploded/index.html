@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hello World da index.html</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+</head>
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<body>
+
+<div class="container">
+    <!--    <h2>Identificazione utente</h2>-->
+    <!--    <form action="autentication" method="post">-->
+    <!--        <p> Login: <input type="text" name="txtUsername" value="ospite"/> </p>-->
+    <!--        <p>Password: <input type="password" name="txtPassword"/></p>-->
+    <!--        <p><input type="submit" class="btn-primary btn" name="submit" value="OK"/></p>-->
+    <!--    </form>-->
+    <!--    <a href="autentication?action=invalid">Accedi come ospite (funzionalità limitate)</a>-->
+    <!--    <hr>-->
+
+
+    <!--    <hr>-->
+    <div id="app">
+        <!------------------    PROVA FORM CON VUE -------------------->
+        <!--prevent evita il refresh del form al click di submit-->
+        <form v-if="!controlloLogin" @submit.prevent="login">
+            <h2>Identificazione utente con Vue</h2>
+            <div>
+                <label for="nameVue">Name</label>
+                <!--Lazy aspetta che tu finisca di scrivere e/o clicchi fuori dall'input, trim toglie di spazi bianchi-->
+                <input type="text" id="nameVue" v-model.trim.lazy="nameVue">
+
+            </div>
+            <div>
+                <label for="pwdVue">Password</label>
+                <input type="text" id="pwdVue" v-model.trim.lazy="pwdVue">
+            </div>
+            <div>
+                <button class="btn-primary btn">Accedi</button>
+            </div>
+        </form>
+
+        <h2>{{utente.ruolo}}</h2>
+        <div v-if="controlloLogin">
+            <p>JSessionID: {{ sessione }}</p>
+            <!--    <p>Controllo sessione: {{ altreInfo }}</p>-->
+            <button class="btn-warning btn" @click="logout">Logout</button>
+
+
+
+            <form @submit.prevent="insertDocente">
+                <div class="form-group">
+                    <label for="cognome">Cognome</label>
+                    <input type="text" class="form-control" id="cognome" v-model.trim.lazy="nuovoDocente.cognome" placeholder="Cognome">
+                </div>
+                <div class="form-group">
+                    <label for="nome">Nome</label>
+                    <input type="text" class="form-control" id="nome" v-model.trim.lazy="nuovoDocente.nome" placeholder="Nome">
+                </div>
+                <button class="btn btn-primary">INSERISCI</button>
+            </form>
+            <h1>asdofhoausfhouasdfhouasdfhasduohfsd</h1>
+
+            <div v-if="utente.ruolo===1">
+<!--                <form-docente></form-docente>-->
+
+                <h1>Hey amicoooo</h1>
+            </div>
+
+
+            <h2>Lettura docenti con Vue chiamata Get</h2>
+            <div v-for="docente in docenti">
+                {{docente.nome}} - {{docente.cognome}}
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+<script>
+    /************* COMPONENTS **********************/
+    // Vue.component('button-counter', {
+    //     data: function () {
+    //         return {count: 0}
+    //     },
+    //     template: '<slot> <!--name="header"--></slot>' +
+    //         '           <button ' +
+    //         'v-on:click=count++>You clicked me {{ count }} times.' +
+    //         '</button>'
+    // });
+    Vue.component('todo-item', {
+        template: '<li>This is a list item</li>'
+    })
+    // Vue.component('form-docente',{
+    //     data:{
+    //         nuovoDocente: {
+    //             nome:'',
+    //             cognome:''
+    //         }
+    //     },
+    //     methods: {
+    //         insertDocente: function (){
+    //             var self = this;
+    //             $.post(this.servlets.docenti,{cognome: this.nuovoDocente.cognome, nome:this.nuovoDocente.nome},function (data){
+    //                 alert(data);
+    //                 this.getDocenti();
+    //             });
+    //         }
+    //     },
+    //    template: `<form @submit.prevent="insertDocente">
+    //             <div class="form-group">
+    //                 <label for="cognome">Cognome</label>
+    //                 <input type="text" class="form-control" id="cognome" v-model.trim.lazy="nuovoDocente.cognome" placeholder="Cognome">
+    //             </div>
+    //             <div class="form-group">
+    //                 <label for="nome">Nome</label>
+    //                 <input type="text" class="form-control" id="nome" v-model.trim.lazy="nuovoDocente.nome" placeholder="Nome">
+    //             </div>
+    //             <button class="btn btn-primary">INSERISCI</button>
+    //         </form>`
+    // });
+
+    new Vue({
+        el: '#app',
+        data: {
+            servlets: {
+                autentication: 'autentication',
+                docenti: 'hello-servlet',
+            },
+            nuovoDocente:{
+                nome: '',
+                cognome: '',
+            },
+            docenti: [],
+            utente:{
+                username:'',
+                password: '',
+                id:'',
+                ruolo:'',
+            },
+            //nameVue ha come testo di default "prova", si vede anche nella input sopra
+            nameVue: 'user1',
+            pwdVue: '',
+            sessione: 'sessione inesistente',
+            altreInfo: '---',
+            controlloLogin: false,
+            res: '',
+        },
+        mounted() {
+            this.getDocenti();
+            this.login();
+        },
+        methods: {
+            getDocenti: function () {
+                var self = this;
+                $.get(this.servlets.docenti, function (data) {
+                    self.docenti = data;
+                });
+            },
+            login: function () {
+                var self = this;
+                if (!self.controlloLogin) {
+                        $.post(this.servlets.autentication, {
+                            username: this.nameVue,
+                            password: this.pwdVue
+                        }, function (data) {
+                            //se sono già loggato, autentication passa solo il ruolo (salvato nella variabile di sessione)
+                            self.res = data;
+                        });
+                    this.nameVue = "";
+                    this.pwdVue = "";
+                }
+            },
+            logout: function () {
+                var self = this;
+                this.sessione = 'sessione inesistente';
+                this.altreInfo = '---';
+                if (self.controlloLogin) {
+                    $.get(this.servlets.autentication, {}, function (result) {
+                        if (result === "true")
+                            self.controlloLogin = false;
+                    });
+                }
+
+            },
+            insertDocente: function (){
+                var self = this;
+                $.post(this.servlets.docenti,{cognome: this.nuovoDocente.cognome, nome:this.nuovoDocente.nome},function (data){
+                    alert(data);
+                    this.getDocenti();
+                });
+            }
+        }
+    });
+
+</script>
+</body>
+</html>

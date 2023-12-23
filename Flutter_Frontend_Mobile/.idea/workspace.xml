@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="NONE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="81326e24-b2e2-408c-ad1d-4c0ec9189658" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NotesForBeno.docx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../reply_projects/amplify/backend/api/replyprojects/cli-inputs.json" beforeDir="false" afterPath="$PROJECT_DIR$/../reply_projects/amplify/backend/api/replyprojects/cli-inputs.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../reply_projects/amplify/backend/api/replyprojects/parameters.json" beforeDir="false" afterPath="$PROJECT_DIR$/../reply_projects/amplify/backend/api/replyprojects/parameters.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../reply_projects/amplify/backend/api/replyprojects/schema.graphql" beforeDir="false" afterPath="$PROJECT_DIR$/../reply_projects/amplify/backend/api/replyprojects/schema.graphql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../reply_projects/amplify/backend/backend-config.json" beforeDir="false" afterPath="$PROJECT_DIR$/../reply_projects/amplify/backend/backend-config.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../reply_projects/amplify/backend/types/amplify-dependent-resources-ref.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../reply_projects/amplify/backend/types/amplify-dependent-resources-ref.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../reply_projects/android/app/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/../reply_projects/android/app/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../reply_projects/lib/main.dart" beforeDir="false" afterPath="$PROJECT_DIR$/../reply_projects/lib/main.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../reply_projects/lib/models/Attivita.dart" beforeDir="false" afterPath="$PROJECT_DIR$/../reply_projects/lib/models/Attivita.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../reply_projects/lib/models/Cliente.dart" beforeDir="false" afterPath="$PROJECT_DIR$/../reply_projects/lib/models/Cliente.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../reply_projects/lib/models/Collega.dart" beforeDir="false" afterPath="$PROJECT_DIR$/../reply_projects/lib/models/Collega.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../reply_projects/lib/models/referenteCliente.dart" beforeDir="false" afterPath="$PROJECT_DIR$/../reply_projects/lib/models/referenteCliente.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../reply_projects/pubspec.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../reply_projects/pubspec.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../reply_projects/pubspec.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/../reply_projects/pubspec.yaml" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="2IjD1vtTJZB3VuYjZNNqmRkbc5c" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="RunOnceActivity.cidr.known.project.marker" value="true" />
+    <property name="cidr.known.project.marker" value="true" />
+    <property name="dart.analysis.tool.window.visible" value="false" />
+    <property name="io.flutter.reload.alreadyRun" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="settings.editor.selected.configurable" value="AndroidSdkUpdater" />
+    <property name="show.migrate.to.gradle.popup" value="false" />
+  </component>
+  <component name="RunManager">
+    <configuration name="main.dart" type="FlutterRunConfigurationType" factoryName="Flutter">
+      <option name="filePath" value="$PROJECT_DIR$/lib/main.dart" />
+      <method v="2" />
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="81326e24-b2e2-408c-ad1d-4c0ec9189658" name="Changes" comment="" />
+      <created>1670685894188</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1670685894188</updated>
+    </task>
+    <servers />
+  </component>
+</project>

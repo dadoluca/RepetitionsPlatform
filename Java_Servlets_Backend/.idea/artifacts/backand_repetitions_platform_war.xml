@@ -1,0 +1,14 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="backand_repetitions_platform:war">
+    <output-path>$PROJECT_DIR$/target</output-path>
+    <properties id="maven-jee-properties">
+      <options>
+        <module>backand_repetitions_platform</module>
+        <packaging>war</packaging>
+      </options>
+    </properties>
+    <root id="archive" name="provaservlet-1.0-SNAPSHOT.war">
+      <element id="artifact" artifact-name="backand_repetitions_platform:war exploded" />
+    </root>
+  </artifact>
+</component>
