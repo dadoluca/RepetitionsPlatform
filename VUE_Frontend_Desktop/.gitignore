@@ -1,3 +1,6 @@
+#All the Argon Template scss
+/src/assets/scss/argon-dashboard
+
 .DS_Store
 node_modules
 /dist
@@ -25,3 +28,4 @@ pnpm-debug.log*
 package-lock.json
 yarn.lock
 MY_README.md
+
