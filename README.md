@@ -1,6 +1,6 @@
 # RepetitionsPlatform
 <h4>A Repetitions Service realized with:
-Flutter (Mobile FE)    Vue Cli (Desktop FE)    Java Servlets (Backend)    MySQL (DB) 
+Flutter (Mobile FE),    Vue Cli (Desktop FE),   Java Servlets (Backend),    MySQL (DB) 
 </h4>
 
 <div style="display: flex;">
