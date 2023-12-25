@@ -1,7 +1,7 @@
 # RepetitionsPlatform
 <h4>A Repetitions Service realized with:
     <ul>
-        <li style="text-color:#30cc8c">Flutter (Mobile FE)</li>
+        <li>Flutter (Mobile FE)</li>
         <li>Vue Cli (Desktop FE)</li>
         <li>Java Servlets (Backend</li>
         <li>MySQL (DB)</li>
