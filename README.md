@@ -1,5 +1,12 @@
 # RepetitionsPlatform
-<h4>A Repetitions Service realized with Flutter (Mobile FE) + VUE (Desktop FE) + JAVA Servlets (Backend) + MySQL (DB)</h4>
+<h4>A Repetitions Service realized with:
+    <ul>
+        <li style="text-color:#30cc8c">Flutter (Mobile FE)</li>
+        <li>Vue Cli (Desktop FE)</li>
+        <li>Java Servlets (Backend</li>
+        <li>MySQL (DB)</li>
+    </ul> 
+</h4>
 
 <div style="display: flex;">
     <img src="VUE_Frontend_Desktop/src/assets/img/webapp_picture/t.png" width="400" alt="Test Image 1">
