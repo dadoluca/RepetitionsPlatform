@@ -3,7 +3,7 @@
     <ul>
         <li>Flutter (Mobile FE)</li>
         <li>Vue Cli (Desktop FE)</li>
-        <li>Java Servlets (Backend</li>
+        <li>Java Servlets (Backend)</li>
         <li>MySQL (DB)</li>
     </ul> 
 </h4>
