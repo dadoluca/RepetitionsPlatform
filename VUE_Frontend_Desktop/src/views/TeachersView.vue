@@ -52,8 +52,8 @@
       <div class="row">
         <div class="col-lg-12">
         <div class="row">
-            <ul style="display: flex; flex-wrap: wrap;">
-                <li v-for="item in teachers" :key="item.idDocente" style="flex: 0 0 47%; list-style: none; margin: 0 0% 3% 0%;display: flex; justify-content: center; ">
+            <ul style="display: flex;  justify-content: center; flex-wrap: wrap;">
+                <li v-for="item in teachers" :key="item.idDocente" style="padding-left:30px; padding-right:30px; list-style: none; margin: 0 0% 3% 0%;display: flex; justify-content: center; ">
                         <CardTeacher
                           :id="item.idDocente"
                           :email="item.email"

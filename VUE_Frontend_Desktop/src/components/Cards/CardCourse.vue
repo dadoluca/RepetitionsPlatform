@@ -15,14 +15,11 @@
       <div class="myCardCenter">
         <h5 class="font-weight-bolder my-text-title">
           {{ title }}
-          <span class="text-sm text-white">{{ percentage }}</span>
-          <div class="rating">
-            <i v-for="star in 5" :key="star" :class="{ 'fas fa-star': percentage >= star, 'far fa-star': percentage < star }"></i>
-          </div>
         </h5>
       </div>   
     </div>
   </div>  
+
 </template>
 
 <style>
@@ -66,10 +63,10 @@ export default {
   name: "CardCourse",
   data() {
     return {
-      reverseDirection: "flex-row-reverse justify-content-between",
       servlets: {
           courses: 'http://localhost:8084/first_vue_implementation_war_exploded/courses',
         },
+    
     };
   },
   methods:{
@@ -90,7 +87,6 @@ export default {
     }
   },
   props: {
-    directionReverse: Boolean,
     title: {
       type: String,
       required: true,

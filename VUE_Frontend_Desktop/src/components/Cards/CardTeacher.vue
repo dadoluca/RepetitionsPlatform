@@ -45,20 +45,24 @@
       </div>
       <div class="card-body pt-0">
         <div class="text-center mt-4">
+          
           <h5>
             {{nome}} {{cognome}}
             <span class="font-weight-light"><br> {{eta}} years old</span>
           </h5>
 
-          <div class="h6 mt-4">
+          <div class="h7 ">
             {{formazione}}
           </div>
-          <div style="display: flex; justify-content: center;">
+          <div style="display: flex; justify-content: center; margin-top: 20px;">
             <div style="border: 1px solid #30cc8c;; border-radius: 10%; width: 25%;">
                 Price:<p style="color: green;font-weight: bold;"> {{prezzoH}} €/h</p>            
             </div>
           </div>
-                
+          <!-- rating -------------->  
+          <div style="display: flex; justify-content: center; margin-top: 20px;">
+          <Rating v-model="ratingValue" :cancel="false" />
+        </div>  
         </div>
         <!-- questo lo vedo se sono admin e sto visualizzando tutti i docenti -->
         <div v-if="this.$store.state.role === 0 && !courseTeacher" class="text-center mt-4">
@@ -72,6 +76,7 @@
             <i class="fa fa-trash-o fa-2x" aria-hidden="true" style="margin-right:0.4rem;margin-top:0.5rem;font-size: medium;"></i>
           </button> 
         </div>
+     
       </div>
     </div>
   </template>
@@ -79,11 +84,16 @@
 
 
 <script>
+import Rating from 'primevue/rating';
 import $ from 'jquery'
 export default {
   name: "CardTeacher",
+  components:{
+    Rating,
+  },
   data() {
     return {
+      ratingValue: 0,
       reverseDirection: "flex-row-reverse justify-content-between",
       servlets: {
           teachers: 'http://localhost:8084/first_vue_implementation_war_exploded/teachers',
