@@ -23,3 +23,6 @@ RepetitionsPlatform is a comprehensive Repetitions Service built using various t
     <img src="Flutter_Frontend_Mobile/pictures/Screenshot_20230120_220048.png" width="147" alt="Test Image 7">
     <img src="Flutter_Frontend_Mobile/pictures/Screenshot_20230123_163148.png" width="150" alt="Test Image 8">
 </div>
+
+## Backend Overview
+The RepetitionsPlatform backend consists of Data Access Object (DAO) classes and servlets. DAOs manage database interactions, handling operations like inserting, modifying, and retrieving data. Servlets process HTTP requests, executing business logic and generating responses. The backend interacts with a MySQL database, ensuring efficient data management. It enforces application-specific rules, validates input, and maintains data integrity.
