@@ -1,6 +1,6 @@
 # RepetitionsPlatform
 
-RepetitionsPlatform is a comprehensive Repetitions Service built using various technologies:
+RepetitionsPlatform is a comprehensive Repetitions Service,  designed for educational purposes, built using various technologies:
 
 - **Vue CLI**: for the Desktop Frontend (FE).
 - **Flutter**: for the Mobile Frontend (FE).
